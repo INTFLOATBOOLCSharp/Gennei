@@ -12,12 +12,14 @@ public class LoadingFinish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //ループが行われるタイミングでのイベント
         videoPlay.loopPointReached += LoopPoint;
         videoPlay.Play();
     }
 
     public void LoopPoint(VideoPlayer vp)
     {
+        //動画再生完了時の処理にtitle1をロードする処理
         SceneManager.LoadScene("Title1");
     }
 }
